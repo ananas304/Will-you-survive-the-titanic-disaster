@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Form</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Quicksand', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-size: 3em;
+            color: #ff6347;
+            font-family: 'Quicksand', sans-serif;
+            margin: 20px 0;
+            text-align: center;
+            margin-top: 4em;
+        }
+        .container {
+            text-align: center;
+            padding: 2em;
+            border: 1px solid #444;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            background-color: #1e1e1e;
+            width: 300px;
+            margin-top: 1em;
+        }
+        label {
+            display: block;
+            margin: 0.5em 0 0.2em;
+        }
+        input, select {
+            width: 100%;
+            padding: 0.5em;
+            margin-bottom: 1em;
+            border-radius: 5px;
+            border: 1px solid #444;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+        }
+        input::placeholder, select::placeholder {
+            color: #bbb;
+        }
+        button {
+            width: auto;
+            padding: 0.5em 1em;
+            margin-bottom: 1em;
+            border-radius: 5px;
+            border: 1px solid #444;
+            background-color: #ff6347;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 1.2em;
+        }
+        button:hover {
+            background-color: #e5533d;
+        }
+    </style>
+</head>
+<body>
+    <h1>Predicting your survival on a Sinking Ship!</h1>
+    <div class="container">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
+
+

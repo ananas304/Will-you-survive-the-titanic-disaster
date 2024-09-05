@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Quicksand', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            padding: 2em;
+            border: 1px solid #444;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            background-color: #1e1e1e;
+        }
+        h1 {
+            font-size: 2em;
+            color: #ff6347;
+        }
+        p {
+            font-size: 1.5em;
+        }
+        a {
+            color: #ff6347;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        a:hover {
+            color: #e5533d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <p>You have {{ result }}.</p>
+        <a href="{% url 'predict' %}">Make another prediction</a>
+    </div>
+</body>
+</html>
